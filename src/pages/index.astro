@@ -9,7 +9,7 @@ const projects = await getCollection("projects").then((projects) =>
   projects.map((project) => ({
     ...project.data,
     priority: project.data.priority || 0,
-  }))
+  })),
 );
 const featuredProjects = projects
   .sort((a, b) => b.priority - a.priority)
@@ -58,15 +58,14 @@ const skills = [
     </div> -->
     <div class="md:flex md:flex-row place-content-center m-5 gap-5 relative">
       <div class="grow">
-        <h1 class="text-4xl font-bold w-fit">Howdy!</h1>
+        <h1 class="text-4xl font-bold w-fit">Hey, I'm Alex.</h1>
         <p class="text-lg">
-          I'm Alex, a developer and student currently studying Computer
-          Engineering at{" "}
+          I'm a developer and student currently studying Computer Engineering at{
+            " "
+          }
           <span class="font-bold text-lightmaroon">Texas A&M University</span>.
-          Currently, I'm passionate about cybersecurity and the intersections of high-performance computing and hardware.
-          I'm currently working on a few projects,
-          including an OpenGL rendering engine and a crowdsourced event
-          platform for the Texas A&M campus.
+          I love learning about cybersecurity and high-performance computing,
+          among other things.
         </p>
       </div>
       <!-- <div class="my-3 md:my-0 shrink-0 hidden md:block mx-6">
