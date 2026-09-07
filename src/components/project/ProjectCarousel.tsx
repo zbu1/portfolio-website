@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback, useRef } from "react";
+import { useState, useEffect, useCallback, useMemo, useRef } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import {
   IoIosArrowBack,
@@ -37,7 +37,7 @@ export default function ProjectCarousel({
   autoPlay = true,
   interval = 5000,
 }: ProjectCarouselProps) {
-  const imageUrls = images.map(getImageUrl);
+  const imageUrls = useMemo(() => images.map(getImageUrl), [images]);
   const [slideshowState, setSlideshowState] = useState<SlideshowState>({
     current: 0,
     isPlaying: autoPlay,
@@ -54,6 +54,14 @@ export default function ProjectCarousel({
   });
 
   const carouselRef = useRef<HTMLDivElement>(null);
+
+  // Preload all carousel images so navigating between slides is instant
+  useEffect(() => {
+    imageUrls.forEach((url) => {
+      const img = new window.Image();
+      img.src = url;
+    });
+  }, [imageUrls]);
 
   const closeModal = () => {
     setModalState({ isOpen: false, image: "", caption: undefined });
