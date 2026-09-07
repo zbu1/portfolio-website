@@ -204,7 +204,7 @@ export default function ProjectCarousel({
         {imageUrls.length > 1 && (
           <>
             <motion.button
-              initial={{ transform: "translateY(-50%) scale(1)" }}
+              initial={{ y: "-50%", scale: 1 }}
               whileHover={{ scale: 1.15 }}
               transition={{ type: "spring", stiffness: 300, damping: 15 }}
               onClick={handlePrev}
@@ -215,7 +215,7 @@ export default function ProjectCarousel({
             </motion.button>
 
             <motion.button
-              initial={{ transform: "translateY(-50%) scale(1)" }}
+              initial={{ y: "-50%", scale: 1 }}
               whileHover={{ scale: 1.15 }}
               transition={{ type: "spring", stiffness: 300, damping: 15 }}
               onClick={handleNext}
