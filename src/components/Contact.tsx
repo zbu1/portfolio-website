@@ -21,7 +21,7 @@ const ContactLinks: ContactLink[] = [
     icon: <HiOutlineMail size={20} />,
   },
   {
-    link: "https://github.com/zanbowie138",
+    link: "https://github.com/zbu1",
     label: "GitHub",
     text: "View my GitHub",
     icon: <FaGithub size={20} />,

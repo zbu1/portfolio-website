@@ -20,7 +20,7 @@ const ContactLinks: ContactLink[] = [
     icon: <HiOutlineMail size={20} />,
   },
   {
-    link: "https://github.com/zanbowie138",
+    link: "https://github.com/zbu1",
     label: "GitHub",
     text: "View my GitHub",
     icon: <FaGithub size={20} />,
@@ -43,7 +43,7 @@ export default function Footer() {
       </div>
       <div>
         <a
-          href="https://github.com/zanbowie138/portfolio-website"
+          href="https://github.com/zbu1/portfolio-website"
           className="text-blue-400 text-md"
         >
           <FaGithub className="inline mx-1 mb-1 w-4 h-4" />
